@@ -1,43 +1,10 @@
-
-
-
 #include <iostream>
-#include <limits>
-
-
-double f(double x){
-	return((1 + x)*log(1 + x) - x);
-}
-
-void binary_search_f(long double target){
-	long double lowerbound=1e-5;
-	long double upperbound=1e50;
-	long double mid;
-
-	while ((upperbound - lowerbound) > (1e-10) * lowerbound)
-	{
-		mid = lowerbound/2.0 + upperbound/2.0;
-
-		if (f(mid) < target){
-			lowerbound = mid;
-		}
-		else{
-			upperbound = mid;
-		}
-
-		double x = lowerbound*(1.0 + 10e-10);
-		if (x > upperbound){
-			break;
-		}
-	}
-	std::cout.precision(50);
-	std::cout << lowerbound << "  " << upperbound << " -> " << f(mid) << "\n";
-}
-
-int main(){
-
-	binary_search_f(17);
-	int keks;
-	std::cin >> keks;
-
-}
+#include <vector>
+#define ld long double
+#define ub b[3]=((b[1]=(b[0] + b[2])/2.0)!=-42&&f(b[1])<target)?b[0]=b[1]:b[2]=b[1];
+#define o std::cout<<std::cout.precision(50)<<"\rf("<<b[0]<<")="<<f(b[0])<<"\n";
+#define e (b[2]-b[0])>(1e-10)*b[0]
+#define ib std::vector<ld>b={1e-5,1,1e50,1};
+#define g return((1+x)*log(1+x)-x);
+#define _ ld f(ld x){g} void bs(ld target){ib while(e){ub}o} int main(){bs(17);}
+_
