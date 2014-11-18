@@ -12,17 +12,10 @@ double f(double x){
 void binary_search_f(long double target){
 	long double lowerbound=1e-5;
 	long double upperbound=1e50;
-	int iterations = 2000;
-
 	long double mid;
 
-
-	//std::cout.precision(std::numeric_limits< long double >::digits10);
-
-	std::cout.precision(50);
-
-
-	for (int c = 0; c <= iterations; c++){
+	while ((upperbound - lowerbound) > (1e-10) * lowerbound)
+	{
 		mid = lowerbound/2.0 + upperbound/2.0;
 
 		if (f(mid) < target){
@@ -32,16 +25,18 @@ void binary_search_f(long double target){
 			upperbound = mid;
 		}
 
-
-		if (c % 200 == 0){
-			std::cout << lowerbound << "  " << upperbound << " -> " << f(mid) << "\n";
+		double x = lowerbound*(1.0 + 10e-10);
+		if (x > upperbound){
+			break;
 		}
 	}
-
+	std::cout.precision(50);
+	std::cout << lowerbound << "  " << upperbound << " -> " << f(mid) << "\n";
 }
 
 int main(){
-	binary_search_f(10.0);
+
+	binary_search_f(17);
 	int keks;
 	std::cin >> keks;
 
