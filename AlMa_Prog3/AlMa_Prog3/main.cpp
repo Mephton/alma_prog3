@@ -13,8 +13,7 @@ ld f(ld x){
 int main(){
 	ld t=42.0;
 	ib
-	while (err){
+	while (err)
 		ub
-	}
 	o
 }
