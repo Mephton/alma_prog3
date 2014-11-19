@@ -1,13 +1,4 @@
 #include <iostream>
 #include <vector>
-#define ld long double
-#define in std::cin>>t;
-#define ub b[3]=((b[1]=(b[0] + b[2])/2.0)!=-42&&f(b[1])<t)?b[0]=b[1]:b[2]=b[1];
-#define o std::cout<<std::cout.precision(50)<<"\rf("<<b[0]<<")="<<f(b[0])<<"\n";
-#define e (b[2]-b[0])>(1e-10)*b[0]
-#define ib std::vector<ld>b={1e-5,1,1e50,1};
-#define g return((1+x)*log(1+x)-x);
-#define _ ld f(ld x){g} int main(){ld t=42;in ib while(e){ub}o in}
-
-
-_
+#include <math.h>
+long double f(long double x){return((1+x)*log(1+x)-x);} int main(){long double t=42;std::cin>>t; std::vector<long double>b={1e-5,1,1e50,1}; while((b[2]-b[0])>(1e-10)*b[0]){b[3]=((b[1]=(b[0] + b[2])/2.0)!=-42&&f(b[1])<t)?b[0]=b[1]:b[2]=b[1];}std::cout<<std::cout.precision(50)<<"\rf("<<b[0]<<")="<<f(b[0])<<"\n"; std::cin>>t;}
