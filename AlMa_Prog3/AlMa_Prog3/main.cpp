@@ -24,20 +24,16 @@ void binary_search_f(long double target){
 		else{
 			upperbound = mid;
 		}
-
-		double x = lowerbound*(1.0 + 10e-10);
-		if (x > upperbound){
-			break;
-		}
 	}
+
 	std::cout.precision(50);
-	std::cout << lowerbound << "  " << upperbound << " -> " << f(mid) << "\n";
+	std::cout << lowerbound << "  " << upperbound << " -> " << f(lowerbound / 2.0 + upperbound / 2.0) << "\n";
 }
 
 int main(){
-
-	binary_search_f(17);
-	int keks;
-	std::cin >> keks;
-
+	long double y;
+	while (true){
+		std::cin >> y;
+		binary_search_f();
+	}
 }
