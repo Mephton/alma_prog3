@@ -34,6 +34,6 @@ int main(){
 	long double y;
 	while (true){
 		std::cin >> y;
-		binary_search_f();
+		binary_search_f(y);
 	}
 }
